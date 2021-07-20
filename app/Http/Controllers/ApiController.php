@@ -38,7 +38,7 @@ class ApiController extends Controller
     $todos = Todo::simplePaginate(2);// 2 items por página
 
     $array['list'] = $todos->items();
-    $array['current_page'] = $todos->currentPage();
+    $array['current_page'] = $todos->currentPage();// Pg atual
 
     return $array;
   }
