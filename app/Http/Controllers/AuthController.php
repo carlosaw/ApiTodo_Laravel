@@ -65,8 +65,9 @@ class AuthController extends Controller
     $array = ['error' => ''];
 
     $user = $request->user();
-    print_r($request->user());
-
+    //$array['email'] = $user->email;//  Usuário que está logado!
+    $user->tokens()->delete();// Deleta todos os tokens do usuário.
+    
     return $array;
   }
 }
