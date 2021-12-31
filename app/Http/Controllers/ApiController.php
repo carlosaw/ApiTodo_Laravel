@@ -90,7 +90,7 @@ class ApiController extends Controller
       $todo->save();
 
     } else {
-      $array['error'] = 'Tarefa '. $id.' não existe, logo, não pode ser atualizado.';
+      $array['error'] = 'Tarefa '. $id.' não existe, logo, não pode ser atualizada.';
     }
     return $array;
   }
